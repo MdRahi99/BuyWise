@@ -4,6 +4,7 @@ import Main from "../Layouts/Main";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Login from "../Components/Authentication/Login";
 import Register from "../Components/Authentication/Register";
+import Products from "../Components/Products/Products";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+            path: '/products',
+            element: <Products></Products>
         },
         {
             path: '/login',
