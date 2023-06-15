@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import img from "../../Assets/banner.jpg";
 import {FaFacebook} from "@react-icons/all-files/fa/FaFacebook";
+import {FaInstagram} from "@react-icons/all-files/fa/FaInstagram";
+import {FaLinkedin} from "@react-icons/all-files/fa/FaLinkedin";
 
 const Banner = () => {
     return (
@@ -26,8 +28,10 @@ const Banner = () => {
                     </Link>
                 </div>
             </div>
-            <div className="lg:flex md:flex flex-col hidden gap-4 text-3xl absolute bottom-36 right-10 text-slate-100 opacity-70">
+            <div className="lg:flex md:flex flex-col hidden gap-4 text-3xl absolute bottom-36 right-10 text-slate-900">
                 <FaFacebook className="hover:text-slate-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"></FaFacebook>
+                <FaInstagram className="hover:text-slate-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"></FaInstagram>
+                <FaLinkedin className="hover:text-slate-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"></FaLinkedin>
             </div>
         </div>
     );
