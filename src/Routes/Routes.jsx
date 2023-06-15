@@ -4,7 +4,8 @@ import Main from "../Layouts/Main";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Login from "../Components/Authentication/Login";
 import Register from "../Components/Authentication/Register";
-import Products from "../Components/Products/Products";
+import AllProducts from "../Components/AllProducts/AllProducts";
+import ProductDetails from "../Components/AllProducts/ProductDetails";
 
 const router = createBrowserRouter([
     {
@@ -17,8 +18,14 @@ const router = createBrowserRouter([
         },
         {
             path: '/products',
-            element: <Products></Products>
+            loader: async() => await fetch('http://localhost:5000/all-products'),
+            element: <AllProducts></AllProducts>
         },
+        {
+          path: "/product-details/:_id",
+          loader: async({params}) => await fetch(`http://localhost:5000/product-details/${params._id}`),
+          element: <ProductDetails></ProductDetails>
+      },
         {
             path: '/login',
             element: <Login></Login>
